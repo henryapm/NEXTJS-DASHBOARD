@@ -15,6 +15,7 @@ import { authenticate } from '../lib/actions';
 export default function LoginForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
+  console.log(callbackUrl);
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined,
